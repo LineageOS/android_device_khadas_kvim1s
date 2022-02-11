@@ -14,7 +14,8 @@ $(call soong_config_set,brcm_libbt,custom_bt_config,//$(LOCAL_PATH):vnd_kvim1s.t
 ## Factory
 PRODUCT_HOST_PACKAGES += \
     aml_image_packer \
-    kvim1s_gen_misc
+    kvim1s_gen_misc \
+    lpflash
 
 ## Init
 PRODUCT_PACKAGES += \

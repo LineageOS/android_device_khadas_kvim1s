@@ -12,9 +12,20 @@ PRODUCT_INSTALL_OUT := $(PRODUCT_OUT)/aml_install
 PRODUCT_UPGRADE_OUT := $(PRODUCT_OUT)/aml_upgrade
 AML_IMAGE_TOOL := $(HOST_OUT_EXECUTABLES)/aml_image_packer$(HOST_EXECUTABLE_SUFFIX)
 KVIM1S_GEN_MISC := $(HOST_OUT_EXECUTABLES)/kvim1s_gen_misc$(HOST_EXECUTABLE_SUFFIX)
+LPFLASH_HOST := $(HOST_OUT_EXECUTABLES)/lpflash$(HOST_EXECUTABLE_SUFFIX)
+
+INSTALLED_SUPER_EMPTY_TARGET := $(PRODUCT_OUT)/super_empty.img
+INSTALLED_SUPER_META_ONLY_TARGET := $(PRODUCT_OUT)/super_meta_only.img
 
 INSTALLED_AML_INSTALL_PACKAGE_TARGET := $(PRODUCT_OUT)/aml_install_package.img
 INSTALLED_AML_UPGRADE_PACKAGE_TARGET := $(PRODUCT_OUT)/aml_upgrade_package.img
+
+# Expand lpmake's compact metadata into the layout expected on the super
+# partition, including reserved space, geometry and every metadata slot.
+$(INSTALLED_SUPER_META_ONLY_TARGET): $(INSTALLED_SUPER_EMPTY_TARGET) $(LPFLASH_HOST)
+	@mkdir -p $(dir $@)
+	@touch $@
+	@$(LPFLASH_HOST) $@ $(INSTALLED_SUPER_EMPTY_TARGET)
 
 # $(1): source file, $(2): staging directory, $(3): destination name if it differs
 define aml-copy-file
@@ -95,8 +106,8 @@ FACTORY_FILES := \
     $(VENDOR_PATH)/factory/u-boot.bin.usb.signed \
     $(VENDOR_PATH)/factory/usb_flow.aml
 
-$(INSTALLED_AML_INSTALL_PACKAGE_TARGET): $(addprefix $(PRODUCT_OUT)/,$(NEEDED_IMAGES) super_empty.img misc.img) $(FACTORY_FILES) $(FACTORY_PATH)/image_install.cfg $(ACP) $(AML_IMAGE_TOOL)
-	$(call aml-build-package,$(PRODUCT_INSTALL_OUT),image_install.cfg,super_empty.img,misc.img)
+$(INSTALLED_AML_INSTALL_PACKAGE_TARGET): $(addprefix $(PRODUCT_OUT)/,$(NEEDED_IMAGES) misc.img) $(INSTALLED_SUPER_META_ONLY_TARGET) $(FACTORY_FILES) $(FACTORY_PATH)/image_install.cfg $(ACP) $(AML_IMAGE_TOOL)
+	$(call aml-build-package,$(PRODUCT_INSTALL_OUT),image_install.cfg,super_meta_only.img,misc.img)
 
 .PHONY: aml_install
 aml_install: $(INSTALLED_AML_INSTALL_PACKAGE_TARGET)
