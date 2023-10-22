@@ -21,6 +21,9 @@ TARGET_DTBO_NAME := android_overlay_dt
 
 #TARGET_KERNEL_CONFIG := meson64_gki_module_config
 
+## Partitions
+BOARD_SUPER_PARTITION_SIZE := 2084569088
+
 ## Properties
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
 
