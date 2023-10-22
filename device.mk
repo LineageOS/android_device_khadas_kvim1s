@@ -22,6 +22,8 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     dhd
 
+TARGET_DHD_VERSION := bcmdhd.100.10.545.x
+
 ## Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay
