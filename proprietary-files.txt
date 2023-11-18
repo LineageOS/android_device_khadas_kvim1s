@@ -1,5 +1,5 @@
 ### All blobs from this list, unless pinned and noted as otherwise,
-##  are from adt3-user 13 TTT1.220909.001.B7 9305992 release-keys.
+##  are from onn_4k_gtv-user 12 SGZ1.221127.063.A1 9885170 release-keys.
 
 # Aucpu
 vendor/lib/firmware/aucpu_fw.bin
