@@ -1,16 +1,13 @@
-### All blobs from this list, unless pinned and noted as otherwise,
-##  are from onn_4k_gtv-user 12 SGZ1.221127.063.A1 9885170 release-keys.
+## All blobs from this list, unless pinned and noted as otherwise,
+## are from onn_4k_gtv-user 12 SGZ1.221127.063.A1 9885170 release-keys.
 
-# Aucpu
+## Aucpu
 vendor/lib/firmware/aucpu_fw.bin
 
 ## Keylayout
 vendor/usr/keylayout/Vendor_0001_Product_0001.kl
 
 ## TZ
-# video firmware per soc
 vendor/lib/teetz/526fc4fc-7ee6-4a12-96e3-83da9565bce8.ta
-# per soc
 vendor/lib/teetz/e92a43ab-b4c8-4450-aa12-b1516259613b.ta
-# hdcp per soc
 vendor/lib/teetz/ff2a4bea-ef6d-11e6-89cc-d4ae52a7b3b3.ta
