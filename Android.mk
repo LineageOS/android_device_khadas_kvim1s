@@ -9,8 +9,10 @@ ifneq ($(filter kvim1s kvim1s_car kvim1s_tab, $(TARGET_DEVICE)),)
 LOCAL_PATH := $(call my-dir)
 include $(call all-makefiles-under,$(LOCAL_PATH))
 
-include $(LOCAL_PATH)/factory.mk
+RADIO_FILES := $(wildcard $(LOCAL_PATH)/factory/bootfiles/*)
+$(foreach f, $(notdir $(RADIO_FILES)), \
+    $(call add-radio-file,factory/bootfiles/$(f)))
 
--include vendor/khadas/kvim1s/firmware.mk
+include $(LOCAL_PATH)/factory.mk
 
 endif
