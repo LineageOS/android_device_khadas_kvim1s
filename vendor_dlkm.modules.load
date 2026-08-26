@@ -64,3 +64,4 @@ amlogic-snd-codec-t9015.ko
 cfg80211.ko
 mac80211.ko
 amlogic-snd-codec-ad82128.ko
+dhd.ko
