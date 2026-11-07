@@ -1,1 +1,4 @@
-# Bootloader and burning assets are supplied in factory/bootfiles.
+## Firmware
+# VIM1S bootloader used by the 5.15 factory images.
+
+bootloader.img;AB

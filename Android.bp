@@ -4,3 +4,9 @@
 //
 
 soong_namespace {}
+
+python_binary_host {
+    name: "kvim1s_gen_misc",
+    main: "factory/gen_misc.py",
+    srcs: ["factory/gen_misc.py"],
+}

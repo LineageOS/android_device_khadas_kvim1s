@@ -12,6 +12,8 @@ from extract_utils.main import (
 module = ExtractUtilsModule(
     'kvim1s',
     'khadas',
+    add_firmware_proprietary_file=True,
+    add_factory_proprietary_file=True,
 )
 
 if __name__ == '__main__':

@@ -1,0 +1,8 @@
+## Factory burning assets
+# Extract from the unpacked VIM1S factory image.
+
+gpt.bin
+odm_ext_a.PARTITION
+u-boot.bin.sd.bin.signed
+u-boot.bin.usb.signed
+usb_flow.aml
