@@ -1,7 +1,0 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="org.lineageos.netflixconfig.overlay">
-    <application android:hasCode="false" />
-    <overlay android:targetPackage="org.lineageos.netflixconfig"
-        android:targetName="NetflixConfigResources"
-        android:isStatic="true" />
-</manifest>

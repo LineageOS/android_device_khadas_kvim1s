@@ -1,4 +1,1 @@
-## All firmware from this list, unless pinned and noted as otherwise,
-## are from YOC (URO4.260304.011.B1).
-
-bootloader.img;AB
+# Bootloader and burning assets are supplied in factory/bootfiles.

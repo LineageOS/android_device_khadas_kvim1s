@@ -4,4 +4,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_oppen.mk
+    $(LOCAL_DIR)/lineage_kvim1s.mk

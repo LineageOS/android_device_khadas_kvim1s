@@ -1,46 +1,25 @@
 ## All blobs from this list, unless pinned and noted as otherwise,
 ## are from YOC (URO4.260304.011.B1).
 
+## Aucpu
+vendor/lib/firmware/aucpu_fw.bin
+
+## BT
+vendor/etc/bluetooth/BCM4345C5.hcd
+vendor/etc/bluetooth/bt_vendor.conf
+
 ## Audio
 odm/lib/libHwAudio_dcvdec.so
 odm/lib/libHwAudio_dtshd.so
 
 ## Display
 vendor/etc/mesondisplay.cfg
-vendor/etc/mesondisplay.cfg:recovery/root/system/etc/mesondisplay.cfg
-
-## DRM
-vendor/lib/libamavutils.so
-vendor/lib/liboemcrypto.so
-vendor/lib/libsecmem.so
-
-## DVB
-vendor/etc/init/dvb.rc
+vendor/etc/mesondisplay.cfg:recovery/root/vendor/etc/mesondisplay.cfg
 
 ## Firmware
 vendor/lib/firmware/video/video_ucode.bin
-vendor/lib/firmware/aucpu_fw.bin
 
-## Netflix
-product/etc/sysconfig/netflix.xml
-vendor/etc/permissions/droidlogic.software.netflix.xml
-
-## OEM Lock
-vendor/bin/hw/android.hardware.oemlock@1.0-service.droidlogic
-vendor/etc/init/android.hardware.oemlock@1.0-service.droidlogic.rc
-vendor/etc/vintf/manifest/android.hardware.oemlock@1.0-service.droidlogic.xml
-
-## TEE
-vendor/bin/hw/android.hardware.security.keymint-service.amlogic
-vendor/etc/init/android.hardware.security.keymint-service.amlogic.rc
-vendor/etc/permissions/android.hardware.hardware_keystore.amlogic.xml
-vendor/etc/vintf/manifest/android.hardware.security.keymint-service-no-rkp.amlogic.xml
-vendor/lib/lib_android_keymaster_keymint_utils.so:vendor/lib/lib_android_keymaster_akeymint_utils.so;FIX_SONAME
-vendor/lib/libcppcose_rkp.so:vendor/lib/libacppcose_rkp.so;FIX_SONAME
-vendor/lib/libkeymint.so:vendor/lib/libakeymint.so;FIX_SONAME
-vendor/lib/libkeymint_remote_prov_support.so:vendor/lib/libakeymint_remote_prov_support.so;FIX_SONAME
-
-## TEE Applets
+## TZ - from ECHOLINK/SEI700BEL/YYZ:14/UKG3.250803.001/5998:user/release-keys
 vendor/lib/teetz/00d1ca22-1764-4e35-90aa-5b8c12630764.ta
 vendor/lib/teetz/2088528d-102a-4716-b940-23fd9be04adf.ta
 vendor/lib/teetz/2c1a33c0-44cc-11e5-bc3b-0002a5d5c51b.ta
@@ -48,7 +27,12 @@ vendor/lib/teetz/526fc4fc-7ee6-4a12-96e3-83da9565bce8.ta
 vendor/lib/teetz/5dc33b6a-216d-4641-a834-b3f3aa1accb8.ta
 vendor/lib/teetz/6c67ce8f-95c1-4826-b62e-1a857a1ced3d.ta
 vendor/lib/teetz/8efb1e1c-37e5-4326-a5d6-8c33726c7d57.ta
+vendor/lib/teetz/9a04f079-9840-4286-ab92-e65be0885f95.ta
 vendor/lib/teetz/d83c3c4a-9e8d-4e4e-ad30-9d40e137f689.ta
 vendor/lib/teetz/e043cde0-61d0-11e5-9c26-0002a5d5c51b.ta
 vendor/lib/teetz/e92a43ab-b4c8-4450-aa12-b1516259613b.ta
 vendor/lib/teetz/ff2a4bea-ef6d-11e6-89cc-d4ae52a7b3b3.ta
+
+# Wifi
+vendor/firmware/wifi/fw_bcm43456c5_ag.bin:vendor/lib/firmware/wifi/fw_bcm43456c5_ag.bin
+vendor/firmware/wifi/nvram_ap6256.txt:vendor/lib/firmware/wifi/nvram_ap6256.txt

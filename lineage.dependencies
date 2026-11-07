@@ -4,15 +4,11 @@
     "target_path": "device/amlogic/ne-common"
   },
   {
-    "repository": "android_kernel_amlogic_oppen-build",
-    "target_path": "kernel/platform/kernel-5.15/vendor/amlogic/oppen-build"
+    "repository": "android_kernel_khadas_kvim1s-build",
+    "target_path": "kernel/platform/kernel-5.15/vendor/khadas/kvim1s-build"
   },
   {
-    "repository": "android_kernel_amlogic_realtek-drivers_8822cs",
-    "target_path": "kernel/platform/kernel-5.15/vendor/amlogic/realtek-drivers/8822cs"
-  },
-  {
-    "repository": "android_hardware_realtek",
-    "target_path": "hardware/realtek"
+    "repository": "android_kernel_amlogic_dhd-driver",
+    "target_path": "kernel/platform/kernel-5.15/vendor/amlogic/dhd-driver"
   }
 ]

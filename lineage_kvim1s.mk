@@ -16,14 +16,14 @@ $(call inherit-product, vendor/lineage/config/common_full_tv.mk)
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
 ## Device identifier. This must come after all inclusions
-PRODUCT_BRAND := Amlogic
-PRODUCT_DEVICE := oppen
-PRODUCT_GMS_CLIENTID_BASE := android-onn-tv
-PRODUCT_MANUFACTURER := Amlogic
-PRODUCT_MODEL := oppen
-PRODUCT_NAME := lineage_oppen
+PRODUCT_BRAND := Khadas
+PRODUCT_DEVICE := kvim1s
+PRODUCT_GMS_CLIENTID_BASE := android-askey-tv
+PRODUCT_MANUFACTURER := khadas
+PRODUCT_MODEL := VIM1S
+PRODUCT_NAME := lineage_kvim1s
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    BuildDesc="onn_4k_gtv-user 14 URO4.260304.011.B1 15051976 release-keys" \
-    BuildFingerprint=onn/onn_4k_gtv/YOC:14/URO4.260304.011.B1/15051976:user/release-keys \
-    SystemName=oppen
+    BuildDesc="adt3-user 13 TTT1.230205.001 9565391 release-keys" \
+    BuildFingerprint=ADT-3/adt3/adt3:13/TTT1.230205.001/9565391:user/release-keys \
+    SystemName=kvim1s
